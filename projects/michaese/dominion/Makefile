@@ -21,6 +21,7 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+# John Hash makefile on piazza used as reference here
 unittest1: unittest1.c dominion.o rngs.out
 	gcc -o unittest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
 
