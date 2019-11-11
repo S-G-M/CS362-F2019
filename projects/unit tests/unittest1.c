@@ -25,7 +25,7 @@ void main(int argc, char** argv)
 
     G.coins = 0;
 
-    printf("\nUnit Test 3: Ambassador Check\n");
+    printf("\nUnit Test 1: Baron Check\n");
 
     int handPos = 0;
     int currentPlayer = 0;

@@ -37,7 +37,7 @@ void main(int argc, char** argv)
 
     // Check first if statement branch
     choice2 = 5;
-    if(playCard_Ambassador(&state, handPos, currentPlayer, choice1, choice2) == -1)
+    if(assertF(-1,playCard_Ambassador(&state, handPos, currentPlayer, choice1, choice2)) == 1)
     {
         printf("\nChoice2 out of bound.\n");
         exit(1);

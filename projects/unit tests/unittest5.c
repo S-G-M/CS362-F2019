@@ -25,7 +25,7 @@ void main(int argc, char** argv)
 
     G.coins = 0;
 
-    printf("\nUnit Test 1: Mine Check\n");
+    printf("\nUnit Test 5: Mine Check\n");
 
     int handPos = 0;
     int currentPlayer = 0;
@@ -42,12 +42,12 @@ void main(int argc, char** argv)
     test = playCard_Mine(&state, handPos, currentPlayer, choice1, choice2);
     if(assertF(test, 1))
     {
-        printf("Failed Unit Test 1 Mine");
+        printf("Failed Unit Test 5 Mine");
         exit(1);
     }
     else
     {
-        printf("Passed Unit Test 1 Mine");
+        printf("Passed Unit Test 5 Mine");
     }
 
     // Test second if statement in the mine function

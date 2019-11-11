@@ -25,7 +25,7 @@ void main(int argc, char** argv)
 
     G.coins = 0;
 
-    printf("\nUnit Test 3: Ambassador Check\n");
+    printf("\nUnit Test 4: Tribute Check\n");
 
     int handPos = 0;
     int currentPlayer = 0;
@@ -43,7 +43,7 @@ void main(int argc, char** argv)
     playCard_Tribute(&state, nextPlayer, currentPlayer);
     if (assertF(deckCounter, state.deckCount[currentPlayer]))
     {
-        printf("\nDecrementing failed, unit test 4 Ambassador\n")
+        printf("\nDecrementing failed, unit test 4 tribute\n")
         exit(1);
     }
 
@@ -60,7 +60,7 @@ void main(int argc, char** argv)
     }
     else
     {
-        printf("\nDecrementing failed, unit test 4 Ambassador\n");
+        printf("\nDecrementing failed, unit test 4 tribute\n");
         exit(1);
     }
     
@@ -78,25 +78,23 @@ void main(int argc, char** argv)
     }
     else
     {
-        printf("\nDecrementing failed, unit test 4 Ambassador\n");
+        printf("\nDecrementing failed, unit test 4 tribute\n");
         exit(1);
     }
     
 
     // Test branch 2 of the first if statement, else part
     // Make sure the discard gets decremented properly in this branch
-    int discardCounter;
-    discardCounter = state.discardCount[nextPlayer];
-    state.deckCount[nextPlayer] = 0;
-    state.discardCount[nextPlayer] = 3;
+    int numCoins;
+    numCoins = G.coins;
     playCard_Tribute(&state, nextPlayer, currentPlayer);
-    if(assertF(deckCounter, state.deckCount[nextPlayer]) == -1)
+    if(assertF(numCoins, G.coins) == -1)
     {
-        printf("\nTest Pass, Decrement Successful\n");
+        printf("\nTest Pass, coin increase Successful\n");
     }
     else
     {
-        printf("\nDecrementing failed, unit test 4 Ambassador\n");
+        printf("\nDecrementing failed, unit test 4 tribute\n");
         exit(1);
     }
 }
