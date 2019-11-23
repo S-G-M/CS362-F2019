@@ -91,7 +91,7 @@ int main()
 		// Choice1 = 1 -> discard estate
 		// If no estate in hand, gain one instead
 		playCard_Minion(&modifiedGame, currentPlayer, choice1, choice2, handPos);
-		/*
+		
 		if (assertF(modifiedGame.numActions, referenceGame.numActions + 1) != 1)
 		{
 			printf("Error adding actions.\n");
@@ -146,7 +146,7 @@ int main()
 				}
 			}
 		}
-		*/
+		
 		memset(&modifiedGame, 23, sizeof(struct gameState));
 		memset(&referenceGame, 23, sizeof(struct gameState));
 	}
