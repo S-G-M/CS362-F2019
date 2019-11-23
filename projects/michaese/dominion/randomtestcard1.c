@@ -21,7 +21,7 @@ int main()
 {
 	struct gameState modifiedGame;
 	struct gameState referenceGame;
-	int numTests = 10;
+	int numTests = 100;
 
 	srand(time(0));
 
